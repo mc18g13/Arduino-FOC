@@ -88,4 +88,12 @@ float _electricalAngle(float shaft_angle, int pole_pairs);
  */
 float _sqrtApprox(float value);
 
+/**
+ * Call AnalogWrite with unit interval duty cycle
+ * 
+ * @param pin - pin to write pwm to
+ * @param unitIntervalDutyCycle - value between [0,1] to map to [0,255]
+ */
+void _analogWriteUnitInterval(int pin, float unitIntervalDutyCycle);
+
 #endif

@@ -71,3 +71,9 @@ float _sqrtApprox(float number) {//low in fat
   // y = y * ( f - ( x * y * y ) ); // better precision
   return number * y;
 }
+
+// Call AnalogWrite with percentage of max duty cycle
+void _analogWriteUnitInterval(int pin, float unitIntervalDutyCycle) {
+  constexpr float MAX_INPUT_ANALOG_WRITE = 255.0f;
+  analogWrite(pin, MAX_INPUT_ANALOG_WRITE * unitIntervalDutyCycle);
+}
